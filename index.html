@@ -39,6 +39,16 @@ layout: null
         .page-section { display: none; }
         .page-section.active { display: block; animation: fadeIn 0.5s ease-out; }
         .nav-link.active { color: #10b981; border-bottom: 2px solid #10b981; }
+        
+        /* 카드가 마우스 호버 시 입체적으로 반응 */
+        .group, .page-section div.bg-white {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+        
+        .group:hover, .page-section div.bg-white:hover {
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 20px 25px -5px rgba(16, 185, 129, 0.15), 0 8px 10px -6px rgba(16, 185, 129, 0.1);
+        }
     </style>
 </head>
 <body class="bg-primary-50 text-slate-800 font-sans">
