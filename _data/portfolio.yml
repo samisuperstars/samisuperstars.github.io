@@ -1,0 +1,67 @@
+# =========================================================
+# 1. 인적 사항 및 기본 정보 (Home & About)
+# =========================================================
+profile:
+  name: "김삼연"
+  english_name: "Samyeon Kim"
+  title: "Assistant Professor, Ph.D."
+  department: "기계공학과"
+  university: "OO대학교"
+  location: "공학관 402호"
+  email: "email@university.ac.kr"
+  
+  # 사진 경로 (assets/images/ 폴더 기준)
+  profile_image: "/assets/images/profile.jpg"
+  home_lab_image: "/assets/images/lab.jpg"
+  
+  # 소셜/학술 링크
+  github_url: "https://github.com"
+  scholar_url: "https://scholar.google.com"
+  
+  # 홈 메인 문구
+  hero_title: "Advancing Sustainable Engineering through Innovation."
+  home_description: "이 홈페이지는 지속 가능한 제품 설계와 적층 제조(DfAM)를 연구하는 김삼연 교수의 연구 포트폴리오입니다. 시스템 복잡성을 낮추고 생애주기 효율을 높이는 최신 연구 성과와 교육 활동을 공유합니다."
+  
+  # 약력 / 소개 문구
+  biography: "저는 기계 시스템의 초기 설계 단계에서 발생하는 복잡성을 정량화하고, 이를 효율적으로 관리하기 위한 설계 방법론을 연구하고 있습니다. 특히 친환경 시대에 발맞추어 ESG 가치를 제품 설계 플랫폼에 통합하는 연구에 집중하고 있습니다."
+
+  # 학력
+  education:
+    - degree: "Ph.D. in Mechanical Engineering"
+      institution: "Korea University"
+    - degree: "M.S. in System Design Engineering"
+      institution: "Korea University"
+
+# =========================================================
+# 2. 연구 분야 (Research)
+# =========================================================
+researches:
+  - title: "Modular Platform Design"
+    icon: "fa-layer-group" # FontAwesome 아이콘 이름
+    description: "다양한 소비자 요구를 충족하면서도 비용을 절감할 수 있는 제품군 플랫폼 설계 전략 및 최적화 연구."
+
+  - title: "DfAM Integration"
+    icon: "fa-cubes"
+    description: "적층 제조의 설계 자유도를 극대화하여 부품 통합 및 경량화를 실현하는 차세대 DfAM 방법론."
+
+# =========================================================
+# 3. 논문 및 실적 (Publications)
+# =========================================================
+publications:
+  - title: "Sustainable System Architecture for Electric Vehicle Platforms"
+    type: "Journal Paper"
+    year: "2026"
+    journal: "International Journal of Design & Sustainability"
+    paper_link: "#"
+    code_link: "#"
+
+# =========================================================
+# 4. 강의 (Teaching)
+# =========================================================
+teaching:
+  undergraduate:
+    - "Introduction to Engineering Design"
+    - "Mechanical Systems Design"
+  graduate:
+    - "Advanced DfAM Methods"
+    - "Product Family & Platform Strategy"
