@@ -4,11 +4,11 @@
 profile:
   name: "김삼연"
   english_name: "Samyeon Kim"
-  title: "Assistant Professor, Ph.D."
-  department: "기계공학과"
-  university: "OO대학교"
-  location: "공학관 402호"
-  email: "email@university.ac.kr"
+  title: "Associate Professor"
+  department: "산업공학과"
+  university: "전남대학교"
+  location: "공학1A관 412호"
+  email: "samkim@jnu.ac.kr"
   
   # 사진 경로 (assets/images/ 폴더 기준)
   profile_image: "/assets/images/profile.jpg"
@@ -16,7 +16,7 @@ profile:
   
   # 소셜/학술 링크
   github_url: "https://github.com"
-  scholar_url: "https://scholar.google.com"
+  scholar_url: "https://scholar.google.com/citations?user=YUBP7XcAAAAJ&hl=en"
   
   # 홈 메인 문구
   hero_title: "Advancing Sustainable Engineering through Innovation."
@@ -27,10 +27,10 @@ profile:
 
   # 학력
   education:
-    - degree: "Ph.D. in Mechanical Engineering"
-      institution: "Korea University"
-    - degree: "M.S. in System Design Engineering"
-      institution: "Korea University"
+    - degree: "Ph.D. in Industrial Engineering"
+      institution: "Nanyang Technological University"
+    - degree: "M.S. in Mechanical Design Engineering"
+      institution: "Jeonbuk National University"
 
 # =========================================================
 # 2. 연구 분야 (Research)
