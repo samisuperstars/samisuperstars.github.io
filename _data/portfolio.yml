@@ -48,11 +48,11 @@ researches:
 # 3. 논문 및 실적 (Publications)
 # =========================================================
 publications:
-
   # ---------------------------------------------------------
   # 2026년 실적
   # ---------------------------------------------------------
   - title: "A hybrid multi-criteria decision-making approach for production line configuration based on product modularity and lifecycle"
+    authors: "Yerim Kim, Jongsuk Lee, <b><u>Samyeon Kim</u></b>, Seung Ki Moon, Manuel Lopez"
     category: "Journal"
     year: "2026"
     journal: "Journal of Engineering Design (Vol. 37, No. 2, pp. 495-528)"
@@ -63,6 +63,7 @@ publications:
   # 2025년 실적
   # ---------------------------------------------------------
   - title: "D-ECOmposer: Sustainable part decomposition for additive manufacturing using machine learning based life cycle assessment"
+    authors: "Minseok Ko, Yeongjun Yoon, Jaeyeon Kim, <b><u>Samyeon Kim</u></b>, Soonjo Kwon"
     category: "Journal"
     year: "2025"
     journal: "Additive Manufacturing (Vol. 103, p. 104759)"
@@ -70,6 +71,7 @@ publications:
     code_link: ""
 
   - title: "Part consolidation and decomposition in redesign for additive manufacturing (RfAM): A taxonomy and review"
+    authors: "Soonjo Kwon, Yosep Oh, David W Rosen, <b><u>Samyeon Kim</u></b>"
     category: "Journal"
     year: "2025"
     journal: "Additive Manufacturing (p. 105044)"
@@ -77,6 +79,7 @@ publications:
     code_link: ""
 
   - title: "Sustainability Impact Evaluation of the Recycling of End-of-Life Crystalline Silicon Solar Photovoltaic Panel Waste in South Korea"
+    authors: "Soonho Kwon, Kim Hae Jong, <b><u>Samyeon Kim</u></b>, Sung Joo Hong"
     category: "Journal"
     year: "2025"
     journal: "Sustainability (Vol. 17, No. 2, p. 431)"
@@ -84,6 +87,7 @@ publications:
     code_link: ""
 
   - title: "Formalized representation of eco-design rules for additive manufacturing design advisor system"
+    authors: "Yanan Wang, Tao Peng, Yi Xiong, <b><u>Samyeon Kim</u></b>, Renzhong Tang"
     category: "Journal"
     year: "2025"
     journal: "Advanced Engineering Informatics (Vol. 68, p. 103755)"
@@ -94,6 +98,7 @@ publications:
   # 2024년 실적
   # ---------------------------------------------------------
   - title: "A systematic design method for additive manufacturing: reconceptualizing product architecture"
+    authors: "<b><u>Samyeon Kim</u></b>, Yunlong Tang, Sang-in Park, David W Rosen"
     category: "Journal"
     year: "2024"
     journal: "Journal of Mechanical Science and Technology (Vol. 38, No. 9, pp. 4545-4555)"
@@ -101,6 +106,7 @@ publications:
     code_link: ""
 
   - title: "An ontology of eco-design for additive manufacturing with informative sustainability analysis"
+    authors: "Yanan Wang, Tao Peng, Yi Xiong, <b><u>Samyeon Kim</u></b>, Yi Zhu, Renzhong Tang"
     category: "Journal"
     year: "2024"
     journal: "Advanced Engineering Informatics (Vol. 60, p. 102430)"
@@ -108,6 +114,7 @@ publications:
     code_link: ""
 
   - title: "An ontology-based knowledge modeling towards eco-design for additive manufacturing"
+    authors: "Yanan Wang, Tao Peng, <b><u>Samyeon Kim</u></b>, Yi Xiong, Yunlong Tang, Renzhong Tang"
     category: "Journal"
     year: "2024"
     journal: "Procedia CIRP (Vol. 122, pp. 760-765)"
@@ -118,6 +125,7 @@ publications:
   # 2023년 실적
   # ---------------------------------------------------------
   - title: "Human-machine collaborative additive manufacturing"
+    authors: "Yi Xiong, Yunlong Tang, <b><u>Samyeon Kim</u></b>, David W Rosen"
     category: "Journal"
     year: "2023"
     journal: "Journal of Manufacturing Systems (Vol. 66, pp. 82-91)"
@@ -125,6 +133,7 @@ publications:
     code_link: ""
 
   - title: "Design for additive manufacturing knowledgebase development and its application for material extrusion"
+    authors: "<b><u>Samyeon Kim</u></b>, Hwijae Park, Sang-in Park"
     category: "Journal"
     year: "2023"
     journal: "Journal of Mechanical Science and Technology (Vol. 37, No. 12, pp. 6193-6203)"
@@ -135,6 +144,7 @@ publications:
   # 2022년 실적
   # ---------------------------------------------------------
   - title: "Bayesian inference-based decision of fatigue life model for metal additive manufacturing considering effects of build orientation and post-processing"
+    authors: "Jaehyeok Doh, Nandhini Raju, Nagarajan Raghavan, David W Rosen, <b><u>Samyeon Kim</u></b>"
     category: "Journal"
     year: "2022"
     journal: "International Journal of Fatigue (Vol. 155, p. 106535)"
@@ -142,6 +152,7 @@ publications:
     code_link: ""
 
   - title: "Knowledge-based design algorithm for support reduction in material extrusion additive manufacturing"
+    authors: "Jaeseung Ahn, Jaehyeok Doh, <b><u>Samyeon Kim</u></b>, Sang-in Park"
     category: "Journal"
     year: "2022"
     journal: "Micromachines (Vol. 13, No. 10, p. 1672)"
@@ -149,6 +160,7 @@ publications:
     code_link: ""
 
   - title: "A study of design for additive manufacturing method for part consolidation to redesign IoT device"
+    authors: "<b><u>Samyeon Kim</u></b>"
     category: "Journal"
     year: "2022"
     journal: "사물인터넷융복합논문지 (Vol. 8, No. 2, pp. 55-59)"
@@ -159,6 +171,7 @@ publications:
   # 2021년 실적
   # ---------------------------------------------------------
   - title: "Machine learning and knowledge graph based design rule construction for additive manufacturing"
+    authors: "Hyunwoong Ko, Paul Witherell, Yan Lu, <b><u>Samyeon Kim</u></b>, David W Rosen"
     category: "Journal"
     year: "2021"
     journal: "Additive Manufacturing (Vol. 37, p. 101620)"
@@ -166,6 +179,7 @@ publications:
     code_link: ""
 
   - title: "Design and manufacturing implications of additive manufacturing"
+    authors: "David Rosen, <b><u>Samyeon Kim</u></b>"
     category: "Book"
     year: "2021"
     journal: "Springer US New York (Research Monograph / Book)"
@@ -176,6 +190,7 @@ publications:
   # 2020년 실적
   # ---------------------------------------------------------
   - title: "A Part Consolidation Design Method for Additive Manufacturing based on Product Disassembly Complexity"
+    authors: "<b><u>Samyeon Kim</u></b>, Seung Ki Moon"
     category: "Journal"
     year: "2020"
     journal: "Applied Sciences (Vol. 10, No. 3, p. 1100)"
@@ -183,6 +198,7 @@ publications:
     code_link: ""
 
   - title: "A characterization method for mechanical properties of metal powder bed fusion parts"
+    authors: "Nandhini Raju, <b><u>Samyeon Kim</u></b>, David W Rosen"
     category: "Journal"
     year: "2020"
     journal: "The International Journal of Advanced Manufacturing Technology (Springer Nature)"
@@ -190,6 +206,7 @@ publications:
     code_link: ""
 
   - title: "A novel strategy for multi-part production in additive manufacturing"
+    authors: "Jingchao Jiang, Xun Xu, Yi Xiong, Yunlong Tang, Guoying Dong, <b><u>Samyeon Kim</u></b>"
     category: "Journal"
     year: "2020"
     journal: "The International Journal of Advanced Manufacturing Technology (Vol. 109, No. 5, pp. 1237-1248)"
@@ -200,6 +217,7 @@ publications:
   # 2019년 실적
   # ---------------------------------------------------------
   - title: "Eco-modular product architecture identification and assessment for product recovery"
+    authors: "<b><u>Samyeon Kim</u></b>, Seung Ki Moon"
     category: "Journal"
     year: "2019"
     journal: "Journal of Intelligent Manufacturing (Vol. 30, pp. 383-403)"
@@ -207,6 +225,7 @@ publications:
     code_link: ""
 
   - title: "A Design for Additive Manufacturing Ontology to Support Manufacturability Analysis"
+    authors: "<b><u>Samyeon Kim</u></b>, David W Rosen, Paul Witherell, Hyunwoong Ko"
     category: "Journal"
     year: "2019"
     journal: "Journal of Computing and Information Science in Engineering (pp. 1-39)"
@@ -214,6 +233,7 @@ publications:
     code_link: ""
 
   - title: "Geometry Correction Approach for Support-Free Image-based 3D Model Using Additive Manufacturing Ontology"
+    authors: "<b><u>Samyeon Kim</u></b>, Jaeseung Ahn, Seokchan Hong, Haejoon Kim, Sang-in Park"
     category: "Journal"
     year: "2019"
     journal: "대한기계학회 춘추학술대회 (pp. 2153-2153)"
@@ -221,6 +241,7 @@ publications:
     code_link: ""
 
   - title: "Design for additive manufacturing: Simplification of product architecture by part consolidation for the lifecycle"
+    authors: "<b><u>Samyeon Kim</u></b>, Yunlong Tang, David W Rosen"
     category: "Conference"
     year: "2019"
     journal: "Proceedings of the 30th Annual International Solid Freeform Fabrication Symposium"
@@ -231,6 +252,7 @@ publications:
   # 2018년 실적
   # ---------------------------------------------------------
   - title: "A Design for Additive Manufacturing Ontology to Support Manufacturability Analysis"
+    authors: "<b><u>Samyeon Kim</u></b>, David W Rosen, Paul Witherell, Hyunwoong Ko"
     category: "Conference"
     year: "2018"
     journal: "ASME International Design Engineering Technical Conferences (IDETC/CIE 2018)"
@@ -238,6 +260,7 @@ publications:
     code_link: ""
 
   - title: "Linking part design to process planning by design for additive manufacturing ontology"
+    authors: "<b><u>Samyeon Kim</u></b>, David W Rosen, Paul Witherell, Hyunwoong Ko"
     category: "Conference"
     year: "2018"
     journal: "Proceedings of the 3rd International Conference on Progress in Additive Manufacturing (Pro-AM 2018)"
@@ -245,6 +268,7 @@ publications:
     code_link: ""
 
   - title: "A Characterization Method for Mechanical Properties of Metal Powder Bed Fusion Parts"
+    authors: "Nandhini Raju, <b><u>Samyeon Kim</u></b>, David Rosen"
     category: "Conference"
     year: "2018"
     journal: "40th International Matador Conference"
@@ -255,117 +279,7 @@ publications:
   # 2017년 실적
   # ---------------------------------------------------------
   - title: "Sustainable platform identification for product family design"
-    category: "Journal"
-    year: "2017"
-    journal: "Journal of Cleaner Production (Vol. 143, pp. 567-581)"
-    paper_link: "#"
-    code_link: ""
-
-  - title: "Sustainable product family configuration based on a platform strategy"
-    category: "Journal"
-    year: "2017"
-    journal: "Journal of Engineering Design (Vol. 28, No. 10-12, pp. 731-764)"
-    paper_link: "#"
-    code_link: ""
-
-  - title: "Disassembly Complexity-Driven Module Identification for Additive Manufacturing"
-    category: "Journal"
-    year: "2017"
-    journal: "Transdisciplinary Engineering: A Paradigm Shift (p. 782)"
-    paper_link: "#"
-    code_link: ""
-
-  - title: "Sustainable product family design and a platform strategy"
-    category: "Thesis"
-    year: "2017"
-    journal: "Nanyang Technological University (PhD Thesis)"
-    paper_link: "#"
-    code_link: ""
-
-  # ---------------------------------------------------------
-  # 2016년 실적
-  # ---------------------------------------------------------
-  - title: "A disassmbly complexity assessment method for sustainable product design"
-    category: "Conference"
-    year: "2016"
-    journal: "2016 IEEE International Conference on Industrial Engineering and Engineering Management (IEEM)"
-    paper_link: "#"
-    code_link: ""
-
-  # ---------------------------------------------------------
-  # 2015년 실적
-  # ---------------------------------------------------------
-  - title: "A new approach for product design by integrating assembly and disassembly sequence structure planning"
-    category: "Conference"
-    year: "2015"
-    journal: "Proceedings of the 18th Asia Pacific Symposium on Intelligent and Evolutionary Systems"
-    paper_link: "#"
-    code_link: ""
-
-  - title: "Assessing and generating modules for product recovery"
-    category: "Conference"
-    year: "2015"
-    journal: "ASME International Design Engineering Technical Conferences (IDETC/CIE 2015)"
-    paper_link: "#"
-    code_link: ""
-
-  # ---------------------------------------------------------
-  # 2014년 실적
-  # ---------------------------------------------------------
-  - title: "Evaluation of shear-compressive strength properties for laminated GFRP composites in electromagnet system"
-    category: "Journal"
-    year: "2014"
-    journal: "Metals and Materials International (Vol. 20, No. 4, pp. 585-592)"
-    paper_link: "#"
-    code_link: ""
-
-  - title: "A framework to identify sustainability indicators for product design"
-    category: "Conference"
-    year: "2014"
-    journal: "2014 IEEE International Conference on Industrial Engineering and Engineering Management"
-    paper_link: "#"
-    code_link: ""
-
-  # ---------------------------------------------------------
-  # 2013년 실적
-  # ---------------------------------------------------------
-  - title: "A product-service system design framework using objective-oriented concepts and blueprint"
-    category: "Conference"
-    year: "2013"
-    journal: "Proceedings of the 19th International Conference on Engineering Design (ICED13)"
-    paper_link: "#"
-    code_link: ""
-
-  - title: "A product-service system model for identifying design factors"
-    category: "Conference"
-    year: "2013"
-    journal: "ASME International Design Engineering Technical Conferences (IDETC/CIE 2013)"
-    paper_link: "#"
-    code_link: ""
-
-  - title: "Change propagation analysis for sustainability in product design"
-    category: "Conference"
-    year: "2013"
-    journal: "2013 IEEE International Conference on Industrial Engineering and Engineering Management"
-    paper_link: "#"
-    code_link: ""
-
-  # ---------------------------------------------------------
-  # 2012년 실적
-  # ---------------------------------------------------------
-  - title: "Changes in whole blood viscosity at low shear rates correlate with intravascular volume changes during hemodialysis"
-    category: "Journal"
-    year: "2012"
-    journal: "The International Journal of Artificial Organs (Vol. 35, No. 6, pp. 425-434)"
-    paper_link: "#"
-    code_link: ""
-
-  - title: "Comparison tests for plasma viscosity measurements"
-    category: "Journal"
-    year: "2012"
-    journal: "International Communications in Heat and Mass Transfer (Vol. 39, No. 10, pp. 1474-1477)"
-    paper_link: "#"
-    code_link: ""
+    authors: "<b><u>Samyeon
 
 
 
