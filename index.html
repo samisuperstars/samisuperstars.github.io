@@ -159,15 +159,12 @@ layout: null
         
             <div class="flex flex-col sm:flex-row gap-4 justify-between items-center mb-8 bg-white p-4 rounded-2xl border border-primary-100 shadow-sm">
                 <div class="flex flex-wrap gap-2" id="pub-filter-buttons">
-                    <button onclick="filterPubs('all', this)" class="pub-filter-btn active-filter px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-primary-600 text-white shadow-sm">
-                        All
-                    </button>
-                    <button onclick="filterPubs('Journal', this)" class="pub-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-primary-100 hover:text-primary-700">
-                        Journals
-                    </button>
-                    <button onclick="filterPubs('Conference', this)" class="pub-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-primary-100 hover:text-primary-700">
-                        Conferences
-                    </button>
+                    <div class="flex flex-wrap gap-2" id="pub-filter-buttons">
+                        <button onclick="filterPubs('all', this)" class="pub-filter-btn active-filter px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-primary-600 text-white shadow-sm">All</button>
+                        <button onclick="filterPubs('Journal', this)" class="pub-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-primary-100 hover:text-primary-700">Journals</button>
+                        <button onclick="filterPubs('Conference', this)" class="pub-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-primary-100 hover:text-primary-700">Conferences</button>
+                        <button onclick="filterPubs('Book', this)" class="pub-filter-btn px-4 py-1.5 rounded-full text-xs font-bold transition-all bg-slate-100 text-slate-600 hover:bg-primary-100 hover:text-primary-700">Books</button>
+                        <button onclick="filterPubs('Thesis', this)" class="pub-filter-btn ...">Theses</button>
                 </div>
         
                 <div class="relative w-full sm:w-64">
