@@ -134,7 +134,7 @@ layout: null
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center pt-2 pb-16 md:pb-20">
                 <div class="space-y-6 text-center md:text-left animate-fade-in">
                     <p class="kicker text-xs sm:text-sm font-bold uppercase text-primary-700">{{ site.data.portfolio.profile.department }} · {{ site.data.portfolio.profile.university }}</p>
-                    <h1 class="font-serif italic font-medium text-3xl sm:text-4xl md:text-5xl text-slate-900 leading-[1.15]">
+                    <h1 class="font-sans font-extrabold tracking-tight text-3xl sm:text-4xl md:text-5xl text-slate-900 leading-[1.15]">
                         {{ site.data.portfolio.profile.hero_title }}
                     </h1>
                     <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-xl mx-auto md:mx-0">
@@ -159,7 +159,7 @@ layout: null
             <!-- 최신 논문 (Publications 데이터에서 자동으로 최근 3건을 보여줍니다) -->
             <div class="border-t border-slate-200 pt-10">
                 <div class="flex items-center justify-between mb-6">
-                    <h2 class="font-serif italic text-xl sm:text-2xl text-slate-900 flex items-center gap-3">
+                    <h2 class="font-sans font-extrabold tracking-tight text-xl sm:text-2xl text-slate-900 flex items-center gap-3">
                         <i class="fa-solid fa-newspaper text-primary-600 text-lg not-italic"></i> Latest Publications
                     </h2>
                     <button onclick="showPage('publications')" class="text-xs sm:text-sm font-semibold text-primary-700 hover:text-primary-800 whitespace-nowrap">전체 보기 →</button>
@@ -179,14 +179,17 @@ layout: null
         <!-- ABOUT SECTION -->
         <section id="about" class="page-section space-y-10">
             <div class="flex flex-col md:flex-row gap-10 items-start">
-                <div class="w-full max-w-xs md:w-1/3 space-y-5">
-                    <div class="inline-block p-1 border-2 border-primary-500 rounded-xl">
-                        <img src="{{ site.data.portfolio.profile.profile_image | relative_url }}" alt="Profile photo of {{ site.data.portfolio.profile.english_name }}" class="w-full rounded-lg">
+                <div class="w-full max-w-xs md:w-2/5">
+                    <div class="p-1 border-2 border-primary-500 rounded-xl">
+                        <img src="{{ site.data.portfolio.profile.profile_image | relative_url }}" alt="Profile photo of {{ site.data.portfolio.profile.english_name }}" class="w-full aspect-[4/5] object-cover rounded-lg">
                     </div>
+                </div>
 
-                    <div>
-                        <h2 class="text-2xl font-bold text-slate-900">{{ site.data.portfolio.profile.english_name }}</h2>
-                        <p class="text-primary-700 font-medium italic text-sm">{{ site.data.portfolio.profile.title }}</p>
+                <div class="w-full md:w-3/5 space-y-6">
+                    <div class="space-y-2">
+                        <p class="kicker text-xs sm:text-sm font-bold uppercase text-primary-700">{{ site.data.portfolio.profile.department }} · {{ site.data.portfolio.profile.university }}</p>
+                        <h2 class="text-3xl font-extrabold tracking-tight text-slate-900">{{ site.data.portfolio.profile.english_name }}</h2>
+                        <p class="text-primary-700 font-semibold text-sm">{{ site.data.portfolio.profile.title }}</p>
                     </div>
 
                     <div class="flex justify-start gap-3">
@@ -218,13 +221,7 @@ layout: null
                         </ul>
                     </div>
                     {% endif %}
-                </div>
 
-                <div class="w-full md:w-2/3 space-y-6">
-                    <h3 class="font-serif italic text-2xl sm:text-3xl text-slate-900">Biography</h3>
-                    <p class="text-slate-600 leading-relaxed text-base">
-                        {{ site.data.portfolio.profile.biography }}
-                    </p>
                     {% if site.data.portfolio.profile.research_interest %}
                     <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
                         <h4 class="font-bold text-primary-800 mb-3">Research Interests</h4>
@@ -243,7 +240,7 @@ layout: null
 
             {% if site.data.portfolio.profile.experience %}
             <div class="space-y-4">
-                <h3 class="font-serif italic text-2xl sm:text-3xl text-slate-900">Experience</h3>
+                <h3 class="font-sans font-extrabold tracking-tight text-2xl sm:text-3xl text-slate-900">Experience</h3>
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
                     <ul class="space-y-2 text-slate-600 text-sm sm:text-base">
                         {% for exp in site.data.portfolio.profile.experience %}
@@ -259,7 +256,7 @@ layout: null
 
             {% if site.data.portfolio.profile.professional_service %}
             <div class="space-y-4">
-                <h3 class="font-serif italic text-2xl sm:text-3xl text-slate-900">Professional Service</h3>
+                <h3 class="font-sans font-extrabold tracking-tight text-2xl sm:text-3xl text-slate-900">Professional Service</h3>
                 <div class="grid grid-cols-1 gap-6">
                     {% for category in site.data.portfolio.profile.professional_service %}
                     <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
@@ -280,7 +277,7 @@ layout: null
 
             {% if site.data.portfolio.profile.standard %}
             <div class="space-y-4">
-                <h3 class="font-serif italic text-2xl sm:text-3xl text-slate-900">Standards Activities</h3>
+                <h3 class="font-sans font-extrabold tracking-tight text-2xl sm:text-3xl text-slate-900">Standards Activities</h3>
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
                     <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
                         {% for item in site.data.portfolio.profile.standard %}
@@ -308,7 +305,7 @@ layout: null
 
         <!-- RESEARCH SECTION -->
         <section id="research" class="page-section">
-            <h2 class="font-serif italic text-2xl sm:text-3xl text-slate-900 mb-4 flex items-center gap-3">
+            <h2 class="font-sans font-extrabold tracking-tight text-2xl sm:text-3xl text-slate-900 mb-4 flex items-center gap-3">
                 <i class="fa-solid fa-microscope text-primary-600 text-xl not-italic"></i> Research Focus
             </h2>
 
@@ -341,7 +338,7 @@ layout: null
 
         <!-- PUBLICATIONS SECTION -->
         <section id="publications" class="page-section">
-            <h2 class="font-serif italic text-2xl sm:text-3xl text-slate-900 mb-6 flex items-center gap-3">
+            <h2 class="font-sans font-extrabold tracking-tight text-2xl sm:text-3xl text-slate-900 mb-6 flex items-center gap-3">
                 <i class="fa-solid fa-book-open text-primary-600 text-xl not-italic"></i> Publications
             </h2>
 
@@ -401,7 +398,7 @@ layout: null
 
         <!-- TEACHING SECTION -->
         <section id="teaching" class="page-section">
-            <h2 class="font-serif italic text-2xl sm:text-3xl text-slate-900 mb-8 flex items-center gap-3">
+            <h2 class="font-sans font-extrabold tracking-tight text-2xl sm:text-3xl text-slate-900 mb-8 flex items-center gap-3">
                 <i class="fa-solid fa-chalkboard-user text-primary-600 text-xl not-italic"></i> Teaching
             </h2>
             <div class="bg-primary-900 text-white p-6 sm:p-10 rounded-2xl relative overflow-hidden">
@@ -441,7 +438,7 @@ layout: null
                 <span class="inline-block text-xs font-bold uppercase kicker text-primary-700 bg-primary-50 px-3 py-1.5 rounded-full">
                     <i class="fa-solid fa-graduation-cap"></i> 대학원생 및 공동연구 문의 환영
                 </span>
-                <h2 class="font-serif italic text-2xl sm:text-3xl text-slate-900">Get in Touch</h2>
+                <h2 class="font-sans font-extrabold tracking-tight text-2xl sm:text-3xl text-slate-900">Get in Touch</h2>
                 <p class="text-slate-600 text-sm sm:text-base">공동 연구 및 대학원 진학 문의는 아래 이메일로 상시 연락 가능합니다.</p>
                 <div class="space-y-4 text-sm sm:text-lg pt-2">
                     <p class="flex items-center justify-center gap-3 text-slate-700 break-all px-2">
