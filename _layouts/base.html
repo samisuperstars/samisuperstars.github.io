@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }} | {{ site.data.portfolio.site_settings.lab_name }}</title>
+    {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}">{% endif %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+            },
+            colors: {
+              primary: {
+                50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0',
+                500: '#10b981', 600: '#059669', 700: '#047857', 800: '#065f46', 900: '#064e3b',
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .kicker { letter-spacing: 0.1em; }
+        .nav-link { border-bottom: 2px solid transparent; }
+        .nav-link.active { color: #047857; border-bottom-color: #059669; }
+        .mobile-nav-link.active { color: #047857; background-color: #f0fdf4; font-weight: 700; }
+        a:focus-visible, button:focus-visible, input:focus-visible {
+            outline: 2px solid #059669;
+            outline-offset: 2px;
+        }
+        .skip-link {
+            position: absolute; left: -9999px; top: 0; z-index: 100;
+            background: #047857; color: #fff; padding: 0.75rem 1.25rem; border-radius: 0 0 0.5rem 0;
+        }
+        .skip-link:focus { left: 0; }
+
+        /* 점-선 타임라인 리스트 (홈 index.html과 동일한 스타일) */
+        .dot-timeline { list-style: none; padding-left: 1.5rem; position: relative; }
+        .dot-timeline > li { position: relative; padding-left: 1.25rem; margin-bottom: 0.6rem; line-height: 1.6; }
+        .dot-timeline > li:last-child { margin-bottom: 0; }
+        .dot-timeline > li::before {
+            content: ""; position: absolute; top: 0.5rem; left: 0;
+            width: 8px; height: 8px; border-radius: 50%;
+            background: #059669; box-shadow: 0 0 0 3px #d1fae5; z-index: 1;
+        }
+        .dot-timeline > li::after {
+            content: ""; position: absolute; top: 1.15rem; left: 3px;
+            width: 2px; height: calc(100% + 0.1rem);
+            background: linear-gradient(to bottom, #059669, #6ee7b7); opacity: 0.5;
+        }
+        .dot-timeline > li:last-child::after { display: none; }
+
+        /* 노트 본문(markdown)이 렌더링되는 영역의 기본 타이포그래피 */
+        .note-content h2 { font-size: 1.375rem; font-weight: 800; color: #0f172a; margin-top: 2rem; margin-bottom: 0.75rem; }
+        .note-content h3 { font-size: 1.125rem; font-weight: 700; color: #0f172a; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+        .note-content p { line-height: 1.8; color: #334155; margin-bottom: 1rem; }
+        .note-content a { color: #047857; text-decoration: underline; text-underline-offset: 2px; }
+        .note-content a:hover { color: #065f46; }
+        .note-content ul, .note-content ol { margin: 0 0 1rem 1.5rem; color: #334155; line-height: 1.8; }
+        .note-content ul { list-style: disc; }
+        .note-content ol { list-style: decimal; }
+        .note-content blockquote { border-left: 3px solid #059669; padding-left: 1rem; color: #475569; font-style: italic; margin: 1rem 0; }
+        .note-content code { background: #f1f5f9; padding: 0.1rem 0.4rem; border-radius: 0.25rem; font-size: 0.9em; }
+        .note-content pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: 0.75rem; overflow-x: auto; margin-bottom: 1rem; }
+        .note-content pre code { background: none; padding: 0; }
+        .note-content img { border-radius: 0.75rem; margin: 1rem 0; }
+    </style>
+</head>
+<body class="bg-white text-slate-800 font-sans">
+    <a href="#main-content" class="skip-link">본문 바로가기</a>
+
+    <!-- 상단 네비게이션 바 -->
+    <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur-md border-b border-slate-200 z-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="{{ '/' | relative_url }}#home" class="font-bold text-lg text-slate-900 tracking-tight flex items-center gap-2 z-50">
+                    <i class="fa-solid fa-leaf text-primary-600"></i> {{ site.data.portfolio.site_settings.lab_name }}
+                </a>
+
+                <nav class="hidden md:flex space-x-8 text-sm font-semibold text-slate-600" aria-label="주 메뉴">
+                    <a href="{{ '/' | relative_url }}#home" class="nav-link py-2 transition-all hover:text-primary-700">Home</a>
+                    <a href="{{ '/' | relative_url }}#about" class="nav-link py-2 transition-all hover:text-primary-700">About</a>
+                    <a href="{{ '/' | relative_url }}#research" class="nav-link py-2 transition-all hover:text-primary-700">Research</a>
+                    <a href="{{ '/' | relative_url }}#publications" class="nav-link py-2 transition-all hover:text-primary-700">Publications</a>
+                    <a href="{{ '/' | relative_url }}#teaching" class="nav-link py-2 transition-all hover:text-primary-700">Teaching</a>
+                    <a href="{{ '/' | relative_url }}#contact" class="nav-link py-2 transition-all hover:text-primary-700">Contact</a>
+                    <a href="{{ '/notes/' | relative_url }}" class="nav-link active py-2 transition-all hover:text-primary-700">Notes</a>
+                </nav>
+
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-slate-600 hover:text-primary-700 z-50" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i id="menu-icon" class="fa-solid fa-bars text-2xl transition-transform duration-300" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-1 shadow-lg absolute w-full top-16 left-0 transition-all duration-300">
+            <a href="{{ '/' | relative_url }}#home" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50">Home</a>
+            <a href="{{ '/' | relative_url }}#about" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50">About</a>
+            <a href="{{ '/' | relative_url }}#research" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50">Research</a>
+            <a href="{{ '/' | relative_url }}#publications" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50">Publications</a>
+            <a href="{{ '/' | relative_url }}#teaching" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50">Teaching</a>
+            <a href="{{ '/' | relative_url }}#contact" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50">Contact</a>
+            <a href="{{ '/notes/' | relative_url }}" class="mobile-nav-link active block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50">Notes</a>
+        </div>
+    </header>
+
+    <main id="main-content" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24 min-h-screen">
+        {{ content }}
+    </main>
+
+    <footer class="bg-primary-900 text-primary-200 py-10">
+        <div class="max-w-5xl mx-auto px-4 text-center text-xs sm:text-sm">
+            <p class="opacity-80">&copy; {{ site.data.portfolio.profile.english_name }}. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('hidden');
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-xmark');
+            mobileBtn.setAttribute('aria-expanded', 'true');
+        }
+        function closeMobileMenu() {
+            mobileMenu.classList.add('hidden');
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+            mobileBtn.setAttribute('aria-expanded', 'false');
+        }
+        mobileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            mobileMenu.classList.contains('hidden') ? openMobileMenu() : closeMobileMenu();
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+                closeMobileMenu();
+                mobileBtn.focus();
+            }
+        });
+        document.addEventListener('click', () => {
+            if (!mobileMenu.classList.contains('hidden')) closeMobileMenu();
+        });
+    </script>
+</body>
+</html>
