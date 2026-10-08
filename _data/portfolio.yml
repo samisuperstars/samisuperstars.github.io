@@ -85,6 +85,14 @@ profile:
 # =========================================================
 # diagram: assets/images/research/ 안의 svg 파일 경로입니다. 비워두면 다이어그램 없이 글만 표시됩니다.
 researches:
+  - title: "Research Interest"
+    description: "
+    - Design for Additive Manufacturing & Smart Manufacturing
+    - Knowledge-based Engineering
+    - Network Science in Product Design
+    - Redesign/Remanufacturing for Green Technologies (Sustainable Design/Manufacturing)"
+
+  
   - title: "복잡도 관리 및 시스템 설계 (Complexity Management and System Design)"
     icon: "fa-diagram-project" # FontAwesome 아이콘 이름
     description: "제품을 하나의 '시스템'으로 보고, 개발 초기 단계에서 발생하는 복잡성을 정량화하고 관리하는 방법론을 연구합니다. 생애주기 전반(생산·사용·서비스·재활용)에서 도출한 기준으로 부품을 체계적으로 모듈화해, 다양한 고객 요구는 만족시키면서도 복잡성과 비용은 낮추는 제품 아키텍처를 설계합니다."
