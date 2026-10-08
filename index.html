@@ -52,6 +52,47 @@ layout: null
         .mobile-nav-link.active { color: #047857; background-color: #f0fdf4; font-weight: 700; }
         .kicker { letter-spacing: 0.1em; }
 
+        /* 점-선 타임라인 리스트 (경력/학력/학회활동/표준화 활동 등에 사용) */
+        .dot-timeline {
+            list-style: none;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .dot-timeline > li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+        .dot-timeline > li:last-child {
+            margin-bottom: 0;
+        }
+        .dot-timeline > li::before {
+            content: "";
+            position: absolute;
+            top: 0.5rem;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #059669;
+            box-shadow: 0 0 0 3px #d1fae5;
+            z-index: 1;
+        }
+        .dot-timeline > li::after {
+            content: "";
+            position: absolute;
+            top: 1.15rem;
+            left: 3px;
+            width: 2px;
+            height: calc(100% + 0.1rem);
+            background: linear-gradient(to bottom, #059669, #6ee7b7);
+            opacity: 0.5;
+        }
+        .dot-timeline > li:last-child::after {
+            display: none;
+        }
+
         /* 키보드 사용자를 위한 포커스 표시 */
         a:focus-visible, button:focus-visible, input:focus-visible {
             outline: 2px solid #059669;
@@ -106,6 +147,7 @@ layout: null
                     <a href="javascript:void(0)" onclick="showPage('publications')" class="nav-link py-2 transition-all hover:text-primary-700" id="nav-publications">Publications</a>
                     <a href="javascript:void(0)" onclick="showPage('teaching')" class="nav-link py-2 transition-all hover:text-primary-700" id="nav-teaching">Teaching</a>
                     <a href="javascript:void(0)" onclick="showPage('contact')" class="nav-link py-2 transition-all hover:text-primary-700" id="nav-contact">Contact</a>
+                    <a href="{{ '/notes/' | relative_url }}" class="nav-link py-2 transition-all hover:text-primary-700">Notes</a>
                 </nav>
 
                 <!-- 모바일 전용 토글 버튼 -->
@@ -123,6 +165,7 @@ layout: null
             <a href="javascript:void(0)" onclick="showPage('publications')" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50" id="mob-nav-publications">Publications</a>
             <a href="javascript:void(0)" onclick="showPage('teaching')" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50" id="mob-nav-teaching">Teaching</a>
             <a href="javascript:void(0)" onclick="showPage('contact')" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50" id="mob-nav-contact">Contact</a>
+            <a href="{{ '/notes/' | relative_url }}" class="mobile-nav-link block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-slate-50">Notes</a>
         </div>
     </header>
 
@@ -211,12 +254,9 @@ layout: null
                     {% if site.data.portfolio.profile.education %}
                     <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
                         <h4 class="font-bold text-primary-800 mb-3">Education</h4>
-                        <ul class="space-y-2 text-slate-600 text-sm sm:text-base">
+                        <ul class="dot-timeline text-slate-600 text-sm sm:text-base">
                             {% for edu in site.data.portfolio.profile.education %}
-                            <li class="flex gap-2">
-                                <span class="shrink-0">•</span>
-                                <span>{{ edu.degree }}, {{ edu.institution }}</span>
-                            </li>
+                            <li>{{ edu.degree }}, {{ edu.institution }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -225,12 +265,9 @@ layout: null
                     {% if site.data.portfolio.profile.research_interest %}
                     <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
                         <h4 class="font-bold text-primary-800 mb-3">Research Interests</h4>
-                        <ul class="space-y-2 text-slate-600 text-sm sm:text-base">
+                        <ul class="dot-timeline text-slate-600 text-sm sm:text-base">
                             {% for interest in site.data.portfolio.profile.research_interest %}
-                            <li class="flex gap-2">
-                                <span class="shrink-0">•</span>
-                                <span>{{ interest }}</span>
-                            </li>
+                            <li>{{ interest }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -242,12 +279,9 @@ layout: null
             <div class="space-y-4">
                 <h3 class="font-sans font-extrabold tracking-tight text-2xl sm:text-3xl text-slate-900">Experience</h3>
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <ul class="space-y-2 text-slate-600 text-sm sm:text-base">
+                    <ul class="dot-timeline text-slate-600 text-sm sm:text-base">
                         {% for exp in site.data.portfolio.profile.experience %}
-                        <li class="flex gap-2">
-                            <span class="shrink-0">•</span>
-                            <span>{{ exp }}</span>
-                        </li>
+                        <li>{{ exp }}</li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -261,12 +295,9 @@ layout: null
                     {% for category in site.data.portfolio.profile.professional_service %}
                     <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
                         <h4 class="font-bold text-primary-800 mb-3">{{ category[0] }}</h4>
-                        <ul class="space-y-2 text-slate-600 text-sm sm:text-base">
+                        <ul class="dot-timeline text-slate-600 text-sm sm:text-base">
                             {% for item in category[1] %}
-                            <li class="flex gap-2">
-                                <span class="shrink-0">•</span>
-                                <span>{{ item }}</span>
-                            </li>
+                            <li>{{ item }}</li>
                             {% endfor %}
                         </ul>
                     </div>
@@ -279,21 +310,18 @@ layout: null
             <div class="space-y-4">
                 <h3 class="font-sans font-extrabold tracking-tight text-2xl sm:text-3xl text-slate-900">Standards Activities</h3>
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                    <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
+                    <ul class="dot-timeline text-slate-600 text-sm sm:text-base">
                         {% for item in site.data.portfolio.profile.standard %}
-                        <li class="flex gap-2">
-                            <span class="shrink-0">•</span>
+                        <li>
                             {% if item.main %}
-                            <div class="flex-1">
-                                {{ item.main }}
-                                <ul class="pl-5 mt-1 space-y-1 text-xs sm:text-sm text-slate-500 list-disc">
-                                    {% for detail in item.details %}
-                                    <li>{{ detail }}</li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
+                            {{ item.main }}
+                            <ul class="pl-5 mt-1 space-y-1 text-xs sm:text-sm text-slate-500 list-disc">
+                                {% for detail in item.details %}
+                                <li>{{ detail }}</li>
+                                {% endfor %}
+                            </ul>
                             {% else %}
-                            <span class="flex-1">{{ item }}</span>
+                            {{ item }}
                             {% endif %}
                         </li>
                         {% endfor %}
@@ -405,23 +433,17 @@ layout: null
                 <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div class="space-y-4">
                         <h3 class="text-lg sm:text-xl font-bold text-primary-200 uppercase kicker">Undergraduate</h3>
-                        <ul class="space-y-3 opacity-90 text-sm sm:text-base">
+                        <ul class="dot-timeline opacity-90 text-sm sm:text-base">
                             {% for course in site.data.portfolio.teaching.undergraduate %}
-                            <li class="flex gap-2">
-                                <span class="shrink-0">•</span>
-                                <span>{{ course }}</span>
-                            </li>
+                            <li>{{ course }}</li>
                             {% endfor %}
                         </ul>
                     </div>
                     <div class="space-y-4">
                         <h3 class="text-lg sm:text-xl font-bold text-primary-200 uppercase kicker">Graduate</h3>
-                        <ul class="space-y-3 opacity-90 text-sm sm:text-base">
+                        <ul class="dot-timeline opacity-90 text-sm sm:text-base">
                             {% for course in site.data.portfolio.teaching.graduate %}
-                            <li class="flex gap-2">
-                                <span class="shrink-0">•</span>
-                                <span>{{ course }}</span>
-                            </li>
+                            <li>{{ course }}</li>
                             {% endfor %}
                         </ul>
                     </div>
