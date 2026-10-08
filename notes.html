@@ -1,0 +1,93 @@
+---
+layout: base
+title: Notes
+---
+<div class="space-y-3 mb-10">
+    <h1 class="font-sans font-extrabold tracking-tight text-3xl sm:text-4xl text-slate-900">Notes</h1>
+    <p class="text-slate-600 text-base sm:text-lg max-w-2xl">연구 노트, 생각 정리, 알아두면 좋은 자료들을 기록하는 공간입니다.</p>
+</div>
+
+<div class="flex flex-col sm:flex-row gap-4 justify-between items-center mb-8 bg-slate-50 p-4 rounded-xl border border-slate-200 w-full">
+    <div class="flex flex-wrap gap-2 justify-center sm:justify-start w-full sm:w-auto" id="note-filter-buttons" role="group" aria-label="노트 카테고리 필터">
+        <button onclick="filterNotes('all', this)" aria-pressed="true" class="note-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition-all bg-primary-700 text-white">All</button>
+        {% assign categories = site.notes | map: 'category' | compact | uniq | sort %}
+        {% for cat in categories %}
+        <button onclick="filterNotes('{{ cat }}', this)" aria-pressed="false" class="note-filter-btn px-3.5 py-1.5 rounded-full text-xs font-bold transition-all bg-white text-slate-600 border border-slate-200 hover:bg-primary-50 hover:text-primary-700">{{ cat }}</button>
+        {% endfor %}
+    </div>
+
+    <div class="relative w-full sm:w-60">
+        <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs" aria-hidden="true"></i>
+        <input type="search" id="note-search-input" oninput="searchNotes()" placeholder="Search notes, tags..." aria-label="노트 검색"
+               class="w-full pl-9 pr-4 py-1.5 bg-white border border-slate-200 rounded-full text-xs focus:outline-none focus:border-primary-500 transition-all">
+    </div>
+</div>
+
+<p id="note-empty-state" class="hidden text-center text-sm text-slate-500 py-10" role="status">조건에 맞는 노트가 없습니다.</p>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5" id="note-list">
+    {% assign sorted_notes = site.notes | sort: 'date' | reverse %}
+    {% for note in sorted_notes %}
+    <a href="{{ note.url | relative_url }}"
+       class="note-item block bg-white p-5 rounded-xl border border-slate-200 hover:border-primary-300 hover:shadow-md transition-all duration-300"
+       data-category="{{ note.category }}"
+       data-title="{{ note.title | downcase }}"
+       data-tags="{{ note.tags | join: ',' | downcase }}">
+        <div class="flex items-center gap-2 mb-2">
+            {% if note.category %}
+            <span class="text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full bg-primary-50 text-primary-700">{{ note.category }}</span>
+            {% endif %}
+            <span class="text-xs font-bold text-slate-400">{{ note.date | date: "%Y-%m-%d" }}</span>
+        </div>
+        <h2 class="font-bold text-slate-900 text-lg mb-2 leading-snug">{{ note.title }}</h2>
+        {% if note.excerpt %}
+        <p class="text-sm text-slate-600">{{ note.excerpt | strip_html | strip_newlines | truncate: 110 }}</p>
+        {% endif %}
+    </a>
+    {% endfor %}
+</div>
+
+<script>
+    let currentNoteCategory = 'all';
+    let noteSearchDebounceTimer = null;
+
+    function filterNotes(category, btnElement) {
+        currentNoteCategory = category;
+        document.querySelectorAll('.note-filter-btn').forEach(btn => {
+            btn.classList.remove('bg-primary-700', 'text-white');
+            btn.classList.add('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+            btn.setAttribute('aria-pressed', 'false');
+        });
+        btnElement.classList.remove('bg-white', 'text-slate-600', 'border', 'border-slate-200');
+        btnElement.classList.add('bg-primary-700', 'text-white');
+        btnElement.setAttribute('aria-pressed', 'true');
+        applyNoteFilters();
+    }
+
+    function searchNotes() {
+        clearTimeout(noteSearchDebounceTimer);
+        noteSearchDebounceTimer = setTimeout(applyNoteFilters, 200);
+    }
+
+    function applyNoteFilters() {
+        const query = document.getElementById('note-search-input').value.toLowerCase();
+        const items = document.querySelectorAll('.note-item');
+        const emptyState = document.getElementById('note-empty-state');
+        let visibleCount = 0;
+
+        items.forEach(item => {
+            const category = item.getAttribute('data-category');
+            const title = item.getAttribute('data-title');
+            const tags = item.getAttribute('data-tags');
+
+            const matchesCategory = (currentNoteCategory === 'all' || category === currentNoteCategory);
+            const matchesSearch = title.includes(query) || tags.includes(query);
+            const isVisible = matchesCategory && matchesSearch;
+
+            item.style.display = isVisible ? 'block' : 'none';
+            if (isVisible) visibleCount++;
+        });
+
+        emptyState.classList.toggle('hidden', visibleCount !== 0);
+    }
+</script>
