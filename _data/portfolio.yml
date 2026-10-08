@@ -16,19 +16,19 @@ profile:
   university: "전남대학교"
   location: "공학1A관 412호"
   email: "samkim@jnu.ac.kr"
-  
+
   # 사진 경로 (assets/images/ 폴더 기준)
   profile_image: "/assets/images/profile.jpg"
   home_lab_image: "/assets/images/GDLlogo1.png"
-  
+
   # 소셜/학술 링크
   github_url: "https://github.com"
   scholar_url: "https://scholar.google.com/citations?user=YUBP7XcAAAAJ&hl=en"
-  
+
   # 홈 메인 문구
   hero_title: "A Better World by Design"
   home_description: "시스템 복잡성을 낮추고 생애주기 효율을 높이는 최신 연구 성과와 교육 활동을 공유합니다."
-  
+
   # 약력 / 소개 문구
   biography: ""
 
@@ -54,24 +54,23 @@ profile:
     - "미국 국립표준기술연구소 (NIST), Systems Integration Division, Guest Researcher (2017.10~2018.01)"
     - "싱가폴 3D 프린팅 센터, 연구원 (2016.10~2017.05)"
 
+  # 학회활동 (카테고리별로 묶어서 표시됩니다)
   professional_service:
-  학회:
-    - "대한산업공학회, 모듈라디자인연구회, 이사 (2023.05~현재)"
-    - "대한기계학회, 생산 및 설계공학부문, 재무이사 (2024.01~현재)"
-    - "대한기계학회, 스마트적층제조연구회, 재무이사 (2023.01~현재)"
-    
-  Editor:
-    - "대한기계학회 논문집 A & B, 부편집인 (2024.01~현재)"
-    
-  Organizer:
-    - "대한기계학회 학술대회, 운영위원"
-    - "대한기계학회 스마트적층제조연구회 & 방산중소벤처기업협회, K-방산 국제 표준인증 제도 발전과 적층제조 기술 적용 방안 대토론회, 2025년 9월9일, 운영위원/발제자"
-    - "The 2nd International Conference on Design for 3D Printing (ICD3DP2023), 2023년 10월 18 to 21일, 운영위원 (재무이사)"
+    학회:
+      - "대한산업공학회, 모듈라디자인연구회, 이사 (2023.05~현재)"
+      - "대한기계학회, 생산 및 설계공학부문, 재무이사 (2024.01~현재)"
+      - "대한기계학회, 스마트적층제조연구회, 재무이사 (2023.01~현재)"
+    Editor:
+      - "대한기계학회 논문집 A & B, 부편집인 (2024.01~현재)"
+    Organizer:
+      - "대한기계학회 학술대회, 운영위원"
+      - "대한기계학회 스마트적층제조연구회 & 방산중소벤처기업협회, K-방산 국제 표준인증 제도 발전과 적층제조 기술 적용 방안 대토론회, 2025년 9월9일, 운영위원/발제자"
+      - "The 2nd International Conference on Design for 3D Printing (ICD3DP2023), 2023년 10월 18 to 21일, 운영위원 (재무이사)"
+    기업경험:
+      - "LG 전자 자문위원 (2023~현재)"
+      - "ASME 압력용기 설계 및 제작 (BPVC) 컨설팅 지원 (2007~2010)"
 
-  기업경험:
-    - "LG 전자 자문위원 (2023~현재)"
-    - "ASME 압력용기 설계 및 제작 (BPVC) 컨설팅 지원 (2007~2010)"
-
+  # 표준화 활동 (일반 항목은 문자열로, 세부 활동이 있으면 main/details로 작성)
   standard:
     - "ISO TC261 Additive Manufacturing, 전문위원 (2026.01~현재)"
     - main: "Enterprise Singapore, Additive Manufacturing Technical Committee, Member (2018.08~현재)"
@@ -80,7 +79,7 @@ profile:
         - "싱가폴 적층제조 기술문서 개발 기여: TR 70:2019 Guidelines on the selection criteria for metal additive manufacturing processes 등"
     - "ASTM F42.04 Design Committee, Member (2018.08~2023.01)"
     - "ASTM Center of Excellence (CoE), Member (2018.08~2023.01)"
-    
+
 # =========================================================
 # 2. 연구 분야 (Research)
 # =========================================================
