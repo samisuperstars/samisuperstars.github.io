@@ -1,3 +1,19 @@
 title: GREEN Design Lab.
 description: Personal Academic Website
 theme: null
+
+# =========================================================
+# 노트(Notes) 기능: _notes/ 폴더에 .md 파일만 추가하면 자동으로
+# /notes/ 목록과 개별 페이지가 생성됩니다. (HTML 수정 불필요)
+# =========================================================
+collections:
+  notes:
+    output: true
+    permalink: /notes/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
