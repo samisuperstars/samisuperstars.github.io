@@ -174,8 +174,73 @@ layout: null
                             {% endfor %}
                         </ul>
                     </div>
+                    {% if site.data.portfolio.profile.research_interest %}
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-primary-800 mb-3">Research Interests</h4>
+                        <ul class="space-y-2 text-slate-600 text-sm sm:text-base">
+                            {% for interest in site.data.portfolio.profile.research_interest %}
+                            <li>• {{ interest }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
                 </div>
             </div>
+
+            {% if site.data.portfolio.profile.experience %}
+            <div class="space-y-4">
+                <h3 class="font-serif italic text-2xl sm:text-3xl text-slate-900">Experience</h3>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <ul class="space-y-2 text-slate-600 text-sm sm:text-base">
+                        {% for exp in site.data.portfolio.profile.experience %}
+                        <li>• {{ exp }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
+
+            {% if site.data.portfolio.profile.professional_service %}
+            <div class="space-y-4">
+                <h3 class="font-serif italic text-2xl sm:text-3xl text-slate-900">Professional Service</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    {% for category in site.data.portfolio.profile.professional_service %}
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                        <h4 class="font-bold text-primary-800 mb-3">{{ category[0] }}</h4>
+                        <ul class="space-y-2 text-slate-600 text-sm sm:text-base">
+                            {% for item in category[1] %}
+                            <li>• {{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+
+            {% if site.data.portfolio.profile.standard %}
+            <div class="space-y-4">
+                <h3 class="font-serif italic text-2xl sm:text-3xl text-slate-900">Standards Activities</h3>
+                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <ul class="space-y-3 text-slate-600 text-sm sm:text-base">
+                        {% for item in site.data.portfolio.profile.standard %}
+                        <li>
+                            {% if item.main %}
+                            • {{ item.main }}
+                            <ul class="pl-5 mt-1 space-y-1 text-xs sm:text-sm text-slate-500 list-disc">
+                                {% for detail in item.details %}
+                                <li>{{ detail }}</li>
+                                {% endfor %}
+                            </ul>
+                            {% else %}
+                            • {{ item }}
+                            {% endif %}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endif %}
         </section>
 
         <!-- RESEARCH SECTION -->
